@@ -9,7 +9,7 @@ def process_input(user_input):
     try:
         i = int(user_input)
         if 0 < i <= 15:
-            pi_rounded = round(pi, i)
+            rounded_pi = round(pi, i)
             return rounded_pi
         else:
             raise Exception
@@ -17,11 +17,13 @@ def process_input(user_input):
         print("Whole numbers from 1 to 15 only!")
         return False
 
-print("This program prints pi to the specified decimal place.")
-print("Specify decimal place from 1 to 15:")
+if __name__ == "__main__":
 
-pi_rounded = False
+    print("This program prints pi to the specified decimal place.")
+    print("Specify decimal place from 1 to 15:")
 
-while not pi_rounded:
-    user_input = input()
-    pi_rounded = process_input(user_input)
+    pi_rounded = False
+
+    while not pi_rounded:
+        user_input = input()
+        pi_rounded = process_input(user_input)
